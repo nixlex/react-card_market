@@ -58,7 +58,7 @@ function App() {
             {...product}
             onIncrement={() => changeCount(product.id, 1)}
             onDecrement={() => changeCount(product.id, -1)}
-            
+            onDelete={() => deleteProduct(product.id)}
           />
         ))}
       </div>

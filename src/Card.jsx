@@ -4,7 +4,9 @@ function ProductItem({ id, name, price, count, onIncrement, onDecrement, onDelet
   };
 
   return (
-    <div className="border border-[#10c0a3ff] rounded-lg w-60 p-6 m-2 text-center text-lg">
+    <div className="border border-[#10c0a3ff] rounded-lg w-60 p-6 m-2 text-center text-lg"
+     onDoubleClick={handleDoubleClick}
+    >
       <div style={{ fontWeight: 'bold', fontSize: 22 }}>{name}</div>
       <div style={{ margin: '8px 0' }}>Price: {price}</div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 24, marginTop: 16 }}>
@@ -12,7 +14,7 @@ function ProductItem({ id, name, price, count, onIncrement, onDecrement, onDelet
         <span>{count}</span>
         <button onClick={onIncrement} disabled={count === 25}>+</button>
       </div>
-      
+      <div style={{ fontSize: 14}}>Двойной клик — удалить</div>
     </div>
   );
 }
